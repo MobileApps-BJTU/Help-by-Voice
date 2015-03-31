@@ -14,14 +14,15 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:src="@drawable/weixin" />
+            android:src="@drawable/ic_menu_head" />
 
         <TextView
             android:id="@+id/textView_name"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="20dp"
             android:layout_toEndOf="@+id/imageView_icon"
             android:layout_toRightOf="@+id/imageView_icon"
             android:text="Jack"
@@ -32,11 +33,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:textColor="#ff0100ff"
             android:layout_alignTop="@+id/textView_name"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
             android:text="Shanghai"
+            android:textColor="#ff1987ff"
             android:textSize="20dp" />
     </RelativeLayout>
 
@@ -48,10 +49,11 @@
             android:id="@+id/textView_content"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:gravity="center_vertical"
             android:layout_centerInParent="true"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
             android:text="New Text"
             android:textSize="20dp" />
     </RelativeLayout>
@@ -66,6 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="2015-3-17"
+            android:textColor="#80000000"
             android:textSize="20dp" />
 
         <TextView
@@ -76,6 +79,7 @@
             android:layout_toLeftOf="@+id/textView_answer"
             android:layout_toStartOf="@+id/textView_answer"
             android:text="0"
+            android:textColor="#80000000"
             android:textSize="20dp" />
 
         <TextView
@@ -84,9 +88,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp"
             android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
             android:text="@string/txt_answer"
+            android:textColor="#80000000"
             android:textSize="20dp" />
     </RelativeLayout>
 </LinearLayout>
