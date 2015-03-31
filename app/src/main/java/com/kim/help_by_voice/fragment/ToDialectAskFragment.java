@@ -10,6 +10,12 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.kim.help_by_voice.Activitys.R;
+import com.kim.help_by_voice.entity.MyApplication;
+import com.kim.help_by_voice.entity.ToDialectQuestion;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -66,7 +72,21 @@ public class ToDialectAskFragment extends Fragment {
         mButtonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                String content = mEditTextContent.getText().toString();
+                ToDialectQuestion question = new ToDialectQuestion();
+                MyApplication myApplication = (MyApplication) getActivity().getApplication();
+                ArrayList<ToDialectQuestion> questionList = myApplication.getQuestionList();
+                question.setAnswer_num(0);
+                question.setContent(content);
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                question.setDate(sdf.format(new Date(System.currentTimeMillis())).toString());
+                question.setIcon(R.drawable.ic_menu_head);
+                mId = questionList.size();
+                question.setId(questionList.size());
+                question.setName("Kim");
+                question.setPlace(mPlace);
+                questionList.add(question);
+                mListener.onButtonClicked();
             }
         });
         //set on click event
