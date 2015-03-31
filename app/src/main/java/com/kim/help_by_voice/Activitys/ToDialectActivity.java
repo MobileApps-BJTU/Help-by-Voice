@@ -40,7 +40,11 @@ public class ToDialectActivity extends Activity implements ToDialectAnswerFragme
 
     @Override
     public void onFinishRecord() {
-
+        MyApplication myApplication = (MyApplication) getApplication();
+        ToDialectQuestion question = myApplication.getQuestionList().get(mQuestionId);
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.replace(R.id.container, ToDialectAnswerFragment.newInstance(question.getName(), question.getPlace(), question.getContent(), question.getDate(), question.getAnswer_num(), mQuestionId, question.getIcon()));
+        ft.commit();
     }
 
     @Override
