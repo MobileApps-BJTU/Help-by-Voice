@@ -14,30 +14,30 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:src="@drawable/weixin" />
+            android:src="@drawable/ic_menu_head" />
 
         <TextView
             android:id="@+id/textView_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="20dp"
             android:layout_toEndOf="@+id/imageView_icon"
             android:layout_toRightOf="@+id/imageView_icon"
             android:text="Jack"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView_best"
-            android:text="Best"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:textColor="#ffff030c"
             android:layout_alignTop="@+id/textView_name"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
+            android:text="Best"
+            android:textColor="#ffff030c"
             android:textSize="20dp" />
     </RelativeLayout>
 
@@ -46,25 +46,25 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:focusable="false"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ic_button_play"
             android:id="@+id/ButtonVoice"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_button_play"
+            android:focusable="false" />
 
         <TextView
             android:id="@+id/textView_voice_time"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:layout_marginLeft="15dp"
-            android:text="10''"
-            android:textSize="20dp"
-            android:gravity="center"
             android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toEndOf="@+id/ButtonVoice"
             android:layout_toRightOf="@+id/ButtonVoice"
-            android:layout_toEndOf="@+id/ButtonVoice" />
+            android:gravity="center"
+            android:text="10''"
+            android:textSize="20dp" />
 
 
     </RelativeLayout>
@@ -77,11 +77,12 @@
             android:id="@+id/textView_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2015-3-17"
-            android:textSize="20dp"
-            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentTop="true"
+            android:text="2015-3-17"
+            android:textColor="#80000000"
+            android:textSize="20dp" />
 
 
     </RelativeLayout>
