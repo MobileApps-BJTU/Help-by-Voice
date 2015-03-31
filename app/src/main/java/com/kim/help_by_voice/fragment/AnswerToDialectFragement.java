@@ -14,8 +14,12 @@ import android.widget.TextView;
 import com.kim.help_by_voice.Activitys.R;
 import com.kim.help_by_voice.entity.MyApplication;
 import com.kim.help_by_voice.entity.ToDialectAnswer;
+import com.kim.help_by_voice.entity.ToDialectQuestion;
 
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -82,21 +86,73 @@ public class AnswerToDialectFragement extends Fragment {
         mButtonSubmint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                  mListener.onFinishRecord();
+                MyApplication myApplication =(MyApplication)getActivity().getApplication();
+                ArrayList<ToDialectQuestion> questionsList = myApplication.getQuestionList();
+                for(int i=0;i<questionsList.size();i++){
+                    if(questionsList.get(i).getId() == mQuestionId){
+                        questionsList.get(i).setAnswer_num(1+questionsList.get(i).getAnswer_num());
+                    }
+                }
+
+                mListener.onFinishRecord();
             }
         });
         //set the on click cancel button
         mButtonCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                MyApplication myApplication = (MyApplication) getActivity().getApplication();
+                ArrayList<ToDialectAnswer> answerList = myApplication.getAnswersList();
+                answerList.remove(answerList.size() - 1);
+                mIsRecording = false;
+                mTextViewContent.setText(getResources().getString(R.string.btn_record_2));
+                mButtonCancel.setVisibility(View.INVISIBLE);
+                mButtonSubmint.setVisibility(View.INVISIBLE);
+                mButtonRecord.setVisibility(View.VISIBLE);
+                mButtonRecord.setText(getResources().getString(R.string.btn_record_0));
             }
         });
         //set the on click record button event
         mButtonRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (mIsRecording) {//stop record
+                    mIsRecording = false;
+                    mRecorder.stop();
+                    mRecorder.release();
+                    mRecorder = null;
 
+                    MyApplication myApplication = (MyApplication) getActivity().getApplication();
+                    ArrayList<ToDialectAnswer> answerList = myApplication.getAnswersList();
+                    ToDialectAnswer answer = new ToDialectAnswer();
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                    answer.setDate(sdf.format(new Date(System.currentTimeMillis())).toString());
+                    answer.setVoice_time(5);
+                    answer.setBest(false);
+                    answer.setIcon(R.drawable.ic_menu_head2);
+                    answer.setName("Jack");
+                    answer.setId(answerList.size());
+                    answer.setQuestionId(mQuestionId);
+                    answer.setAudioPath(FileName);
+                    answerList.add(answer);
+                    mButtonRecord.setVisibility(View.INVISIBLE);
+                    mButtonSubmint.setVisibility(View.VISIBLE);
+                    mButtonCancel.setVisibility(View.VISIBLE);
+                    mTextViewContent.setText(getResources().getString(R.string.btn_record_2));
+                } else {//start record
+                    mIsRecording = true;
+                    mButtonRecord.setText(getResources().getString(R.string.btn_record_1));
+                    mRecorder = new MediaRecorder();
+                    mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+                    mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+                    mRecorder.setOutputFile(FileName);
+                    mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+                    try {
+                        mRecorder.prepare();
+                    } catch (IOException e) {
+                    }
+                    mRecorder.start();
+                }
             }
         });
         return view;
