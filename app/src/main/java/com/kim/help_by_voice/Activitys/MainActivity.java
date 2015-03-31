@@ -160,33 +160,6 @@ public class MainActivity extends FragmentActivity implements
         MyApplication myApplication  = (MyApplication)getApplication();
         ArrayList<ToDialectAnswer> answerList = myApplication.getAnswersList();
         ArrayList<ToDialectQuestion> questionList = myApplication.getQuestionList();
-//        if(answerList.size() == 0){
-//            for(int i=0;i<5;i++){
-//                ToDialectQuestion question = new ToDialectQuestion();
-//                question.setAnswer_num(2);
-//                question.setContent("How to say hello in Shanghainese?");
-//                question.setDate("2015-3-30");
-//                question.setIcon(R.drawable.ic_menu_head);
-//                question.setId(i);
-//                question.setName("Kim");
-//                question.setPlace(getResources().getString(R.string.pro_shanghai));
-//                questionList.add(question);
-//                for(int j=0;j<2;j++){
-//                    ToDialectAnswer answer = new ToDialectAnswer();
-//                    answer.setId(2*i+j);
-//                    answer.setQuestionId(i);
-//                    answer.setAudioPath("");
-//                    answer.setName("Jack");
-//                    answer.setVoice_time(10);
-//                    answer.setIcon(R.drawable.ic_menu_head2);
-//                    answer.setDate("2015-3-31");
-//                    if(j==1){
-//                        answer.setBest(true);
-//                    }
-//                    answerList.add(answer);
-//                }
-//            }
-//        }
     }
 
     @Override
