@@ -28,6 +28,10 @@ public class AskToDialectActivity extends Activity implements PlaceChooseFragmen
     public void getChoosedPlace(String place) {
         mPlace = place;
         this.setTitle(mPlace);
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.replace(R.id.container, ToDialectAskFragment.newInstance(mPlace));
+        ft.addToBackStack(null);
+        ft.commit();
     }
 
     @Override
