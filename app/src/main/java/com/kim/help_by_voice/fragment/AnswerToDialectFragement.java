@@ -86,11 +86,11 @@ public class AnswerToDialectFragement extends Fragment {
         mButtonSubmint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyApplication myApplication =(MyApplication)getActivity().getApplication();
+                MyApplication myApplication = (MyApplication) getActivity().getApplication();
                 ArrayList<ToDialectQuestion> questionsList = myApplication.getQuestionList();
-                for(int i=0;i<questionsList.size();i++){
-                    if(questionsList.get(i).getId() == mQuestionId){
-                        questionsList.get(i).setAnswer_num(1+questionsList.get(i).getAnswer_num());
+                for (int i = 0; i < questionsList.size(); i++) {
+                    if (questionsList.get(i).getId() == mQuestionId) {
+                        questionsList.get(i).setAnswer_num(1 + questionsList.get(i).getAnswer_num());
                     }
                 }
 
@@ -128,7 +128,7 @@ public class AnswerToDialectFragement extends Fragment {
                     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                     answer.setDate(sdf.format(new Date(System.currentTimeMillis())).toString());
                     answer.setVoice_time(5);
-                    answer.setBest(false);
+                    answer.setBest(true);
                     answer.setIcon(R.drawable.ic_menu_head2);
                     answer.setName("Jack");
                     answer.setId(answerList.size());
