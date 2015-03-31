@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">语音求助</string>
+    <string name="tab_home">主页</string>
+    <string name="tab_dialect">转国语</string>
+    <string name="tab_ask">提问</string>
+    <string name="tab_song">歌曲</string>
+    <string name="tab_me">我</string>
+    <string name="txt_answer">回答</string>
+    <string name="btn_my_question">我的提问</string>
+    <string name="btn_my_answers">我的回答</string>
+    <string name="btn_answer">回答</string>
+    <string name="btn_mandarin_to_dialect">国\nto\n 方</string>
+    <string name="btn_dialect_to_mandarin">方\nto\n国</string>
+    <string name="btn_song_to_mandarin">歌曲识别</string>
+    <string name="infer_choose_place">请选择一个地点</string>
+    <string name="btn_submit">提交</string>
+    <string name="btn_cancel">取消</string>
+    <string name="txt_best">最好</string>
+    <string name="btn_record_0">录音</string>
+    <string name="btn_record_1">结束</string>
+    <string name="btn_record_2">录音结束，是否需要提交？</string>
+
+    <!--China Provinces-->
+    <string name="pro_beijing">北京</string>
+    <string name="pro_shanghai">上海</string>
+    <string name="pro_tianjin">天津</string>
+    <string name="pro_chongqing">重庆</string>
+    <string name="pro_heilongjiang">黑龙江</string>
+    <string name="pro_jilin">天津</string>
+    <string name="pro_liaoning">辽宁</string>
+    <string name="pro_hebei">河北</string>
+    <string name="pro_henan">河南</string>
+    <string name="pro_yunnan">云南</string>
+    <string name="pro_hunan">湖南</string>
+    <string name="pro_anhui">安徽</string>
+    <string name="pro_shandong">山东</string>
+    <string name="pro_xinjiang">新疆</string>
+    <string name="pro_jiangsu">江苏</string>
+    <string name="pro_zhejiang">浙江</string>
+    <string name="pro_jiangxi">江西</string>
+    <string name="pro_hubei">湖北</string>
+    <string name="pro_guangxi">广西</string>
+    <string name="pro_gansu">甘肃</string>
+    <string name="pro_shanxi">山西</string>
+    <string name="pro_neimenggu">内蒙古</string>
+    <string name="pro_Shuanxi">山西</string>
+    <string name="pro_fujian">福建</string>
+    <string name="pro_guizhou">贵州</string>
+    <string name="pro_guangdong">广东</string>
+    <string name="pro_qinghai">青海</string>
+    <string name="pro_xizang">西藏</string>
+    <string name="pro_sichuan">四川</string>
+    <string name="pro_ningxia">宁夏</string>
+    <string name="pro_taiwan">台湾</string>
+    <string name="pro_xianggang">香港</string>
+    <string name="pro_aomen">澳门</string>
+    <string name="action_settings">设置</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_ask_to_dialect">语音求助</string>
+    <string name="title_activity_to_dialect">语音求助</string>
+</resources>
