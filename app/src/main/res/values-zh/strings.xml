@@ -16,7 +16,7 @@
     <string name="infer_choose_place">请选择一个地点</string>
     <string name="btn_submit">提交</string>
     <string name="btn_cancel">取消</string>
-    <string name="txt_best">最好</string>
+    <string name="txt_best">0点赞</string>
     <string name="btn_record_0">录音</string>
     <string name="btn_record_1">结束</string>
     <string name="btn_record_2">录音结束，是否需要提交？</string>
