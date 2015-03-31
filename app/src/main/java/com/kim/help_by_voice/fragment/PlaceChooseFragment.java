@@ -52,7 +52,36 @@ public class PlaceChooseFragment extends Fragment {
 
     //get the provinces of China
     public void getChinaProvinces() {
-
+        mItems.add(getResources().getString(R.string.pro_anhui));
+        mItems.add(getResources().getString(R.string.pro_aomen));
+        mItems.add(getResources().getString(R.string.pro_beijing));
+        mItems.add(getResources().getString(R.string.pro_chongqing));
+        mItems.add(getResources().getString(R.string.pro_fujian));
+        mItems.add(getResources().getString(R.string.pro_gansu));
+        mItems.add(getResources().getString(R.string.pro_guangdong));
+        mItems.add(getResources().getString(R.string.pro_guangxi));
+        mItems.add(getResources().getString(R.string.pro_guizhou));
+        mItems.add(getResources().getString(R.string.pro_hebei));
+        mItems.add(getResources().getString(R.string.pro_heilongjiang));
+        mItems.add(getResources().getString(R.string.pro_henan));
+        mItems.add(getResources().getString(R.string.pro_jiangsu));
+        mItems.add(getResources().getString(R.string.pro_jiangxi));
+        mItems.add(getResources().getString(R.string.pro_jilin));
+        mItems.add(getResources().getString(R.string.pro_liaoning));
+        mItems.add(getResources().getString(R.string.pro_neimenggu));
+        mItems.add(getResources().getString(R.string.pro_ningxia));
+        mItems.add(getResources().getString(R.string.pro_shandong));
+        mItems.add(getResources().getString(R.string.pro_shanghai));
+        mItems.add(getResources().getString(R.string.pro_shanxi));
+        mItems.add(getResources().getString(R.string.pro_sichuan));
+        mItems.add(getResources().getString(R.string.pro_Shuanxi));
+        mItems.add(getResources().getString(R.string.pro_taiwan));
+        mItems.add(getResources().getString(R.string.pro_tianjin));
+        mItems.add(getResources().getString(R.string.pro_xianggang));
+        mItems.add(getResources().getString(R.string.pro_xinjiang));
+        mItems.add(getResources().getString(R.string.pro_xizang));
+        mItems.add(getResources().getString(R.string.pro_yunnan));
+        mItems.add(getResources().getString(R.string.pro_zhejiang));
     }
 
     //set the list view
