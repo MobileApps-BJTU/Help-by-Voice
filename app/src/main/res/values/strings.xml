@@ -17,7 +17,7 @@
     <string name="infer_choose_place">Please choose a place</string>
     <string name="btn_submit">Submit</string>
     <string name="btn_cancel">Cancel</string>
-    <string name="txt_best">Best</string>
+    <string name="txt_best">0 UP</string>
     <string name="btn_record_0">Press to speak</string>
     <string name="btn_record_1">Press to finish</string>
     <string name="btn_record_2">Record finished, do you want to submit?</string>
