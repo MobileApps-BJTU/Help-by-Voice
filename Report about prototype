@@ -1,0 +1,14 @@
+#1.	All team members have committed content to their Phase II github repository
+Yes, all team members have committed and updated content to our Phase || github repository.
+#2.	App prototype uses good android coding practices as discussed in class
+Yes, our app prototype uses good android coding practices as discussed in class.
+#3.	Four (4) screens that clearly demonstrate behavior from at least two use cases
+There are 9 screens in our app.
+We complete two use cases. They are asking questions about translating mandarin to dialect and answering the question.
+#4.	One (1) data layout element (List or Grid) using a data adapter
+Yes, there are many data layout elements in our app.
+#5.	Two (2) Fragments that communicate via the Activity and respond to the Back button
+Yes. There are 6 Fragments in our app. And several but not all fragment communicate via the Activity and respond to the Back button.
+#6.	Localization in English and Chinese for all interface elements
+Yes, our app supports English and Chinese.
+

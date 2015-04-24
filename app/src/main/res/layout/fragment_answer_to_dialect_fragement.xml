@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kim.help_by_voice.fragment.AnswerToDialectFragement">
+
+
+    <TextView
+        android:id="@+id/textView_content"
+        android:layout_width="280dp"
+        android:layout_height="200dp"
+        android:layout_above="@+id/button_record"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="45dp"
+        android:background="@drawable/bg_edittext"
+        android:gravity="center"
+        android:text="New Text" />
+
+    <Button
+        android:id="@+id/button_record"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="145dp"
+        android:background="#ff45b033"
+        android:text="@string/btn_record_0" />
+
+    <Button
+        android:id="@+id/button_submit"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView_content"
+        android:layout_alignStart="@+id/textView_content"
+        android:layout_alignTop="@+id/button_record"
+        android:layout_marginTop="60dp"
+        android:background="#ff45b033"
+        android:text="@string/btn_submit"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/button_cancel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_submit"
+        android:layout_alignEnd="@+id/textView_content"
+        android:layout_alignRight="@+id/textView_content"
+        android:background="#ff45b033"
+        android:text="@string/btn_cancel"
+        android:visibility="invisible" />
+</RelativeLayout>
